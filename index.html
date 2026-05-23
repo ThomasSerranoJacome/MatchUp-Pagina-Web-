@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiscaWear — Camisetas Originales & Réplicas Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+ 
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>ENVÍO GRATIS</span> en pedidos mayores a $150.000 COP &nbsp;|&nbsp; Réplicas <span>AAA+</span> con garantía de calidad
+  <span style="color:var(--gray)">📦 Envíos a toda Colombia</span>
+</div>
+ 
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">Misca<span>Wear</span><sub>® premium</sub></a>
+    <nav>
+      <div class="nav-item">Premier League <span class="arrow">▾</span></div>
+      <div class="nav-item">La Liga <span class="arrow">▾</span></div>
+      <div class="nav-item">Serie A <span class="arrow">▾</span></div>
+      <div class="nav-item">Bundesliga <span class="arrow">▾</span></div>
+      <div class="nav-item">Selecciones <span class="arrow">▾</span></div>
+      <div class="nav-item">Outlet</div>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" title="Buscar">🔍</button>
+      <button class="icon-btn" title="Mi cuenta">👤</button>
+      <button class="icon-btn" title="Carrito" style="position:relative">
+        🛒<span class="cart-badge">3</span>
+      </button>
+    </div>
+  </div>
+</header>
+ 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Temporada 2025 / 2026</div>
+      <h1 class="hero-title">
+        La Camiseta<br>Que <em>Llevas</em><br>Con Orgullo
+      </h1>
+      <p class="hero-desc">Camisetas originales y réplicas premium de los mejores clubes y selecciones del mundo. Calidad AAA+ garantizada.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary">Ver colección ⚽</button>
+        <button class="btn-outline">Novedades 2026</button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Modelos</div>
+        </div>
+        <div>
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Clientes felices</div>
+        </div>
+        <div>
+          <div class="stat-num">48<span>h</span></div>
+          <div class="stat-label">Envío express</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="jersey-card large">⚽</div>
+      <div class="jersey-card">🏆</div>
+      <div class="jersey-card">🌍</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CATEGORY STRIP -->
+<div class="categories">
+  <div class="cat-inner">
+    <div class="cat-item active" onclick="filterCat(this,'todos')">Todos</div>
+    <div class="cat-item" onclick="filterCat(this,'pl')">Premier League</div>
+    <div class="cat-item" onclick="filterCat(this,'laliga')">La Liga</div>
+    <div class="cat-item" onclick="filterCat(this,'seriea')">Serie A</div>
+    <div class="cat-item" onclick="filterCat(this,'bundesliga')">Bundesliga</div>
+    <div class="cat-item" onclick="filterCat(this,'selecciones')">Selecciones</div>
+    <div class="cat-item" onclick="filterCat(this,'retro')">Retro</div>
+  </div>
+</div>
+ 
+<!-- PRODUCTS SECTION -->
+<div class="section-header">
+  <div>
+    <div class="section-title">Más Vendidos</div>
+    <div class="section-sub" id="prod-count">Mostrando 10 productos</div>
+  </div>
+  <a href="#" class="see-all">Ver todos →</a>
+</div>
+ 
+<div class="product-grid" id="product-grid">
+</div>
+ 
+<!-- BANNERS -->
+<div class="banner-section">
+  <div class="banner banner-1">
+    <div class="banner-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+    <div>
+      <div class="banner-label">Premier League</div>
+      <div class="banner-title">Manchester, Liverpool,<br>Arsenal y más</div>
+      <div class="banner-link">Explorar colección →</div>
+    </div>
+  </div>
+  <div class="banner banner-2">
+    <div class="banner-emoji">🌎</div>
+    <div>
+      <div class="banner-label">Copa Mundial 2026</div>
+      <div class="banner-title">Camisetas oficiales<br>selecciones nacionales</div>
+      <div class="banner-link">Ver colección →</div>
+    </div>
+  </div>
+</div>
+ 
+<!-- TRUST -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon">🚚</div>
+      <div class="trust-title">Envío a Colombia</div>
+      <div class="trust-sub">Gratis desde $150.000 COP</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🏅</div>
+      <div class="trust-title">Calidad Garantizada</div>
+      <div class="trust-sub">Réplicas AAA+ certificadas</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🔄</div>
+      <div class="trust-title">Devoluciones fáciles</div>
+      <div class="trust-sub">30 días sin preguntas</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💳</div>
+      <div class="trust-title">Pago seguro</div>
+      <div class="trust-sub">Nequi · PSE · Contra entrega</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💬</div>
+      <div class="trust-title">Soporte 7/7</div>
+      <div class="trust-sub">WhatsApp y chat en vivo</div>
+    </div>
+  </div>
+</div>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Misca<span>Wear</span></div>
+        <div class="footer-tagline">Tu tienda de camisetas originales y réplicas premium. Envíos a toda Colombia.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Ligas</h4>
+        <a href="#">Premier League</a>
+        <a href="#">La Liga</a>
+        <a href="#">Serie A</a>
+        <a href="#">Bundesliga</a>
+        <a href="#">Selecciones</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mi cuenta</h4>
+        <a href="#">Mis pedidos</a>
+        <a href="#">Lista de deseos</a>
+        <a href="#">Devoluciones</a>
+        <a href="#">Seguir pedido</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <a href="#">Guía de tallas</a>
+        <a href="#">¿Cómo comprar?</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Políticas de envío</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 MiscaWear. Todos los derechos reservados.</span>
+      <div class="payment-icons">
+        <span class="pay-chip">Nequi</span>
+        <span class="pay-chip">PSE</span>
+        <span class="pay-chip">Bancolombia</span>
+        <span class="pay-chip">Contra entrega</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+const products = [
+  { id:1, name:"Camiseta Local Real Madrid 2025/26", league:"La Liga", price:89000, oldPrice:129000, badge:"sale", emoji:"⚪", cat:"laliga" },
+  { id:2, name:"Camiseta Local Manchester City 2025/26", league:"Premier League", price:89000, oldPrice:129000, badge:"new", emoji:"🔵", cat:"pl" },
+  { id:3, name:"Camiseta Visitante Barcelona 2025/26", league:"La Liga", price:79000, oldPrice:119000, badge:"sale", emoji:"🔴", cat:"laliga" },
+  { id:4, name:"Camiseta Colombia Copa América 2025", league:"Selecciones", price:95000, oldPrice:135000, badge:"orig", emoji:"🟡", cat:"selecciones" },
+  { id:5, name:"Camiseta Arsenal FC Local 2025/26", league:"Premier League", price:79000, oldPrice:119000, badge:"sale", emoji:"🔴", cat:"pl" },
+  { id:6, name:"Camiseta Juventus Local 2025/26", league:"Serie A", price:79000, oldPrice:119000, badge:"new", emoji:"⚫", cat:"seriea" },
+  { id:7, name:"Camiseta Bayern München 2025/26", league:"Bundesliga", price:85000, oldPrice:125000, badge:"sale", emoji:"🔴", cat:"bundesliga" },
+  { id:8, name:"Camiseta Brasil Mundial 2026", league:"Selecciones", price:95000, oldPrice:135000, badge:"orig", emoji:"🟢", cat:"selecciones" },
+  { id:9, name:"Camiseta Liverpool Local 2025/26", league:"Premier League", price:79000, oldPrice:119000, badge:"sale", emoji:"🔴", cat:"pl" },
+  { id:10, name:"Camiseta PSG 2025/26 Mbappé Ed.", league:"Ligue 1", price:89000, oldPrice:129000, badge:"new", emoji:"🔵", cat:"laliga" },
+];
+ 
+let currentCat = 'todos';
+ 
+function filterCat(el, cat) {
+  document.querySelectorAll('.cat-item').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  currentCat = cat;
+  renderProducts();
+}
+ 
+function badgeLabel(b) {
+  if (b === 'sale') return { cls: 'badge-sale', text: '30% OFF' };
+  if (b === 'new')  return { cls: 'badge-new',  text: 'NUEVO' };
+  if (b === 'orig') return { cls: 'badge-orig', text: 'ORIGINAL' };
+  return null;
+}
+ 
+function renderProducts() {
+  const grid = document.getElementById('product-grid');
+  const filtered = currentCat === 'todos' ? products : products.filter(p => p.cat === currentCat);
+  document.getElementById('prod-count').textContent = `Mostrando ${filtered.length} producto${filtered.length !== 1 ? 's' : ''}`;
+ 
+  grid.innerHTML = filtered.map((p, i) => {
+    const b = badgeLabel(p.badge);
+    const disc = Math.round((1 - p.price / p.oldPrice) * 100);
+    return `
+    <div class="product-card" style="animation-delay:${i * 0.05}s">
+      <div class="card-img">
+        <span style="font-size:72px;z-index:1;position:relative">${p.emoji}👕</span>
+        ${b ? `<span class="badge ${b.cls}">${b.text}</span>` : ''}
+        <div class="card-overlay">
+          <button class="btn-add" onclick="addCart(event, ${p.id})">Añadir al carrito</button>
+          <button class="btn-wish" title="Lista de deseos">♡</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-league">${p.league}</div>
+        <div class="card-name">${p.name}</div>
+        <div class="card-price">
+          <span class="price-old">${p.oldPrice.toLocaleString('es-CO')} COP</span>
+          <span class="price-new">${p.price.toLocaleString('es-CO')}</span>
+          <span class="price-tag">-${disc}%</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+ 
+let cartCount = 3;
+function addCart(e, id) {
+  e.stopPropagation();
+  cartCount++;
+  document.querySelector('.cart-badge').textContent = cartCount;
+  const btn = e.target;
+  btn.textContent = '✓ Añadido';
+  btn.style.background = '#16a34a';
+  setTimeout(() => { btn.textContent = 'Añadir al carrito'; btn.style.background = ''; }, 1500);
+}
+ 
+renderProducts();
+</script>
+</body>
+</html>
