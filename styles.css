@@ -410,3 +410,196 @@
   .product-card:nth-child(3) { animation-delay: .15s; }
   .product-card:nth-child(4) { animation-delay: .20s; }
   .product-card:nth-child(5) { animation-delay: .25s; }
+/* ══════════════════════════════════
+   BOTÓN FLOTANTE WHATSAPP
+══════════════════════════════════ */
+#wa-fab {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 999;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 20px 12px 14px;
+  border-radius: 50px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: .06em;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4);
+  transition: transform .2s, box-shadow .2s;
+}
+#wa-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37,211,102,.5);
+}
+
+/* ══════════════════════════════════
+   MODAL BASE
+══════════════════════════════════ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(10,22,40,.65);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .22s;
+  padding: 20px;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal-box {
+  background: var(--white);
+  border-radius: 16px;
+  width: 100%; max-width: 480px;
+  padding: 28px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,.22);
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(12px);
+  transition: transform .22s;
+}
+.modal-overlay.open .modal-box { transform: translateY(0); }
+
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 32px; height: 32px; border-radius: 50%;
+  border: none; background: var(--light-gray);
+  color: var(--gray); font-size: 14px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .15s;
+}
+.modal-close:hover { background: #d0d8e8; }
+
+.modal-header { margin-bottom: 20px; }
+.modal-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; color: var(--navy); letter-spacing: .03em;
+  margin-bottom: 4px;
+}
+.modal-sub { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+/* ══════════════════════════════════
+   TABS DE PAGO
+══════════════════════════════════ */
+.pay-tabs {
+  display: flex; gap: 8px; margin-bottom: 16px;
+}
+.pay-tab {
+  flex: 1; padding: 10px;
+  border-radius: 8px; border: 1.5px solid var(--light-gray);
+  background: transparent;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: .06em;
+  color: var(--gray); cursor: pointer;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.pay-tab:hover { border-color: var(--electric); color: var(--electric); }
+.pay-tab.active {
+  border-color: var(--electric); color: var(--electric);
+  background: #eef4ff;
+}
+.pay-panel { display: none; }
+.pay-panel.active { display: block; }
+
+/* ══════════════════════════════════
+   TARJETA DE DATOS DE PAGO
+══════════════════════════════════ */
+.pay-info-card {
+  background: var(--off-white);
+  border: 1px solid var(--light-gray);
+  border-radius: 12px; padding: 18px;
+  margin-bottom: 16px;
+}
+.pay-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px; letter-spacing: .1em;
+  margin-bottom: 12px; display: inline-block;
+  padding: 4px 12px; border-radius: 4px;
+}
+.nequi-logo { background: #6c2cc6; color: white; }
+.banco-logo { background: #ffd600; color: #1a1a1a; }
+
+.pay-rows { margin-bottom: 12px; }
+.pay-row {
+  display: flex; justify-content: space-between;
+  align-items: center; padding: 7px 0;
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 13px;
+}
+.pay-row:last-child { border-bottom: none; }
+.pay-label { color: var(--gray); }
+.pay-val { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); }
+
+.btn-copy {
+  width: 100%; padding: 9px;
+  border-radius: 7px; border: 1.5px solid var(--electric);
+  background: transparent; color: var(--electric);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: .08em;
+  cursor: pointer; transition: background .15s;
+}
+.btn-copy:hover { background: #eef4ff; }
+
+/* ══════════════════════════════════
+   PASOS DE PAGO
+══════════════════════════════════ */
+.pay-steps { margin-bottom: 16px; }
+.pay-step {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; color: var(--gray);
+  line-height: 1.5; margin-bottom: 8px;
+}
+.ps-num {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--navy); color: white;
+  font-family: 'Bebas Neue', sans-serif; font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+
+/* ══════════════════════════════════
+   BOTÓN WA CONFIRMAR
+══════════════════════════════════ */
+.btn-wa-confirm {
+  width: 100%; padding: 13px;
+  border-radius: 8px; border: none;
+  background: #25D366; color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: background .15s, transform .1s;
+}
+.btn-wa-confirm:hover { background: #1ebe5a; transform: translateY(-1px); }
+
+/* ══════════════════════════════════
+   TALLAS
+══════════════════════════════════ */
+.talla-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+.talla-btn {
+  width: 46px; height: 46px; border-radius: 8px;
+  border: 1.5px solid var(--light-gray);
+  background: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 700; color: var(--navy);
+  cursor: pointer; transition: border-color .15s, background .15s;
+}
+.talla-btn:hover { border-color: var(--electric); color: var(--electric); }
+.talla-btn.sel {
+  border-color: var(--electric); background: var(--electric); color: white;
+}
+
+/* ══════════════════════════════════
+   TOAST
+══════════════════════════════════ */
+.toast {
+  position: fixed; bottom: 90px; right: 28px; z-index: 600;
+  background: var(--navy); color: white;
+  padding: 10px 20px; border-radius: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: .08em;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .2s, transform .2s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
